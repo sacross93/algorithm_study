@@ -6,4 +6,4 @@ python ignore
 .venv/
 
 # logs
-logs/
+log
