@@ -32,7 +32,11 @@ s consists of English letters, digits, symbols and spaces.
 test_input1 = "abcabcbb"
 test_input2 = "bbbbb"
 test_input3 = "pwwkew"
-test_input = [test_input1, test_input2, test_input3]
+test_input4 = " "
+test_input5 = "au"
+test_input6 = "aab"
+test_input7 = "dvdf"
+test_input = [test_input1, test_input2, test_input3, test_input4]
 
 for input in test_input:
     print(input)
@@ -40,12 +44,14 @@ for input in test_input:
 temp = ""
 result_str = []
 
-for i in test_input1:
+for i in test_input7:
     if i not in temp:
         temp += i
     else:
         result_str.append(temp)
-        temp = ""
+        temp = temp[temp.index(i)+1:] + i
+    
+result_str.append(temp)
 
 len_result_str = []
 for i in result_str:
