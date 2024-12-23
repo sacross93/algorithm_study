@@ -44,11 +44,12 @@ for input in test_input:
 temp = ""
 result_str = []
 
-for i in test_input7:
+for i in test_input3:
     if i not in temp:
         temp += i
     else:
         result_str.append(temp)
+        print(temp[temp.index(i)+1:])
         temp = temp[temp.index(i)+1:] + i
     
 result_str.append(temp)
